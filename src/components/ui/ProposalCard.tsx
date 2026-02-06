@@ -273,7 +273,7 @@ export default function ProposalCard() {
                       className="flex items-center gap-1 px-3 py-1.5 text-xs bg-white border border-rose-200 rounded-full shadow-sm hover:shadow-md hover:bg-rose-50 transition-all hover:scale-105"
                     >
                       <ArrowLeft className="w-3 h-3" />
-                      <span>Back to celebration</span>
+                      <span>Back</span>
                     </button>
                   </div>
                 </div>

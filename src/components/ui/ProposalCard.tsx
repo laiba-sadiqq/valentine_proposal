@@ -4,7 +4,7 @@ import { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { Heart, Mail, ArrowLeft } from 'lucide-react';
 import FloatingPetals from './FloatingPetals';
-import peejoImage from '@/assets/peejo-2.jpeg';
+import peejoImage from '@/assets/peejo-2.jpg';
 
 export default function ProposalCard() {
   const shimmerStyle = `
@@ -221,122 +221,12 @@ export default function ProposalCard() {
                   {/* Letter body */}
                   <div className="bg-white/90 rounded-lg p-2 sm:p-3 md:p-4 shadow-inner border border-rose-100 max-h-[40vh] sm:max-h-[50vh] overflow-y-auto">
                     <div className="space-y-2 md:space-y-3 text-left">
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        Assalam-u-Alaikum!!!! 🥰
-                      </p>
                       
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        Ahmmmmmmmmm kese hain ap 😚
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        Happyyy valentines dayyy 💘🌹
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        anddd yes yesss congratsss to be my valentinee 🙈💞
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        lit lit lit 🔥🔥
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        pta ni konse ache karam kiye hain mein k ap mile mujje 🥺🙊
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed font-medium text-rose-700 text-xs md:text-sm mt-2">
-                        lubb youuu hd ki hd se bhi zyadaaaaa 😭💖
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        yrrr u dont even know k kitna kitna kitna zyada pyaar krne lg gya hoon mein ap se 💞💞
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        or hamesha krti rhoon gi bhi in sha allahhhhhh 🤲💫
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        ap ka subha uthte msg dekh k hsne se hi mera din acha guzr jata h 🥹🌸
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        apka jaan khnaaaaa mere dil pe thaaaaa kr k lgta h 💘💓
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        itna acha lgta h jb ap jaan, mera bcha khte ho 😩🫶
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        dil garden garden sa ho jata h 🌷🌼🌸
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed font-medium text-rose-700 text-xs md:text-sm mt-2">
-                        Reallyy wannaa meet u soonnn 🙊💋
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        In sha allahhhhhhhhh 🤍✨
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        Loveeeee youuuu 💋
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        love youuuu 😚
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        loveeee youuuuuuu 💞💞💞
-                      </p>
                       
                       <p className="text-gray-800 leading-relaxed text-xs md:text-sm mt-2">
                         You matter to me more than u think and more than i show 🫀🫂💋
                       </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        bs ap hameshaa ese hi rhein 🤍
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        hameshaaa din ba din apka pyaar mere liye bhare 🥹💖
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        na k kabhi km ho 🫣🤲
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        In sha allahhh 😚✨
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        apko ek ek baat btana mujhe itna psnd hain 😩🫠
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        or unhin baaton ka gor se sunna usse bhi zyada psnd 🫶💭
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed font-medium text-rose-700 text-xs md:text-sm mt-2">
-                        I'll never everr stop lovinggg youuuuuuuu 💋😚🫂
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        Yesterday i realised yr k me apse itni muhabbat krne lg gyi hoon 🥺💞
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        k apne liye duaein mangna hi bhool jati hoon 🤍
-                      </p>
-                      
-                      <p className="text-gray-800 leading-relaxed text-xs md:text-sm">
-                        bs apk liye dher si duaein kr k uth jati hoon 🤲🥺✨
-                      </p>
-                      
+                    
                       <p className="text-gray-800 leading-relaxed font-semibold text-rose-800 mt-2 text-xs md:text-sm">
                         Thankyouuu sooo muchhh for everything 🫠💖
                       </p>

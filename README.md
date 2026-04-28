@@ -54,5 +54,5 @@ open index.html
 
 ## 👩‍💻 Author
 
-Laiba Saadiq
+Laiba Sadiq
 Software Engineering Student

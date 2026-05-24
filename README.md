@@ -34,10 +34,12 @@ This project was built to practice front-end development skills, especially:
 ---
 
 ## 📸 Screenshots
-<img width="828" height="494" alt="image" src="https://github.com/user-attachments/assets/3ce3db44-975d-47c6-984d-a5900051899b" />
+<img width="885" height="792" alt="image" src="https://github.com/user-attachments/assets/9597f84c-8ff5-4a43-86a5-f2819c37a169" />
+
+<img width="729" height="776" alt="image" src="https://github.com/user-attachments/assets/dcc7c164-79b4-41ba-bae1-84d78c295b64" />
 
 
-<img width="944" height="760" alt="image" src="https://github.com/user-attachments/assets/5efb3b84-e704-4f75-871d-4b729db95fd5" />
+<img width="928" height="864" alt="image" src="https://github.com/user-attachments/assets/4938cd4a-3431-4cf6-a47b-0372f20e90fe" />
 
 
 ---

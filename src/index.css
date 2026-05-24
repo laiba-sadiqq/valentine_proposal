@@ -231,6 +231,27 @@
     box-shadow: var(--shadow-premium);
   }
 
+  /* Colored borders for cards to improve contrast */
+  .glass-card-border-rose {
+    border-color: rgba(236,72,153,0.18);
+    box-shadow: 0 10px 30px rgba(236,72,153,0.04), var(--shadow-premium);
+  }
+
+  .glass-card-border-purple {
+    border-color: rgba(124,58,237,0.16);
+    box-shadow: 0 10px 30px rgba(124,58,237,0.035), var(--shadow-premium);
+  }
+
+  .glass-card-border-red {
+    border-color: rgba(239,68,68,0.14);
+    box-shadow: 0 10px 30px rgba(239,68,68,0.03), var(--shadow-premium);
+  }
+
+  .glass-card-border-amber {
+    border-color: rgba(250,204,21,0.12);
+    box-shadow: 0 10px 30px rgba(250,204,21,0.02), var(--shadow-premium);
+  }
+
   .floating-heart {
     animation: float 4s ease-in-out infinite;
   }

@@ -1,63 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
-
 @layer base {
   :root {
-    --background: 350 100% 98%;
-    --foreground: 350 60% 20%;
+    --background: 0 0% 100%;
+    --foreground: 260 30% 15%;
 
-    --card: 350 100% 99%;
-    --card-foreground: 350 60% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 30% 15%;
 
-    --popover: 350 100% 99%;
-    --popover-foreground: 350 60% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 30% 15%;
 
-    --primary: 340 82% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 340 70% 85%;
+    --primary-foreground: 340 20% 20%;
 
-    --secondary: 350 100% 95%;
-    --secondary-foreground: 340 82% 45%;
+    --secondary: 260 60% 90%;
+    --secondary-foreground: 260 20% 30%;
 
-    --muted: 350 40% 92%;
-    --muted-foreground: 350 30% 50%;
+    --muted: 260 10% 95%;
+    --muted-foreground: 260 5% 50%;
 
-    --accent: 0 75% 60%;
+    --accent: 340 50% 70%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 350 60% 90%;
-    --input: 350 60% 90%;
-    --ring: 340 82% 65%;
+    --border: 260 20% 80%;
+    --input: 260 20% 80%;
+    --ring: 340 70% 85%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
 
-    /* Custom Valentine tokens */
-    --valentine-rose: 340 82% 65%;
-    --valentine-deep: 350 80% 50%;
-    --valentine-blush: 350 100% 95%;
-    --valentine-cream: 40 50% 97%;
-    --valentine-gold: 45 90% 65%;
-    
-    --gradient-romantic: linear-gradient(135deg, hsl(350 100% 95%) 0%, hsl(340 80% 90%) 50%, hsl(350 100% 95%) 100%);
-    --gradient-heart: linear-gradient(180deg, hsl(340 82% 65%) 0%, hsl(350 80% 50%) 100%);
-    --gradient-glow: radial-gradient(circle, hsl(340 82% 65% / 0.3) 0%, transparent 70%);
-    
-    --shadow-romantic: 0 10px 40px -10px hsl(340 82% 65% / 0.3);
-    --shadow-soft: 0 4px 20px -4px hsl(350 60% 50% / 0.15);
+    /* Updated gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--primary)) 100%);
+    --gradient-heart: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 60%);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --shadow-romantic: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--secondary) / 0.1);
+    --shadow-premium: 0 20px 40px -15px rgba(225, 29, 72, 0.15), 0 0 20px rgba(225, 29, 72, 0.05);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 260 30% 15%;
+    --sidebar-primary: 260 30% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 30% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 260 20% 80%;
+    --sidebar-ring: 260 20% 80%;
   }
 
   .dark {
@@ -106,12 +101,25 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Poppins', sans-serif;
+    background-color: #6e1d43; /* lighter pastel pink */
+    /* lighter tint over the background image to avoid a dark look */
+    background-image: linear-gradient(180deg, rgba(179, 83, 118, 0.9), rgba(161, 46, 83, 0.9)), url('/src/assets/valen.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
   }
 
   .font-romantic {
     font-family: 'Dancing Script', cursive;
+  }
+  
+  /* Smooth scrolling and cleaner layout resets */
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -135,6 +143,51 @@
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
+  
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+
+  /* App-wide container to keep pages consistent */
+  .app-container {
+    @apply w-full max-w-5xl mx-auto px-4 sm:px-8 py-12;
+  }
+
+  /* Subtle side decorations to fill empty sides without distracting */
+  .page-edges {
+    background-image: radial-gradient(ellipse at left center, rgba(255,182,193,0.08) 0%, transparent 40%), radial-gradient(ellipse at right center, rgba(255,182,193,0.06) 0%, transparent 45%);
+    background-position: left center, right center;
+    background-size: 36% 100%, 36% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .page-edges::before,
+  .page-edges::after {
+    content: '';
+    position: fixed;
+    top: 8vh;
+    width: 420px;
+    height: 420px;
+    pointer-events: none;
+    background-image: radial-gradient(circle at 30% 30%, rgba(255,182,193,0.22), transparent 40%), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffb6c1' d='M12 21s-8-4.35-8-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.65-8 10-8 10z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.14;
+    filter: saturate(1.02);
+    z-index: 0;
+    transform: rotate(-8deg);
+  }
+
+  .page-edges::after {
+    right: 0;
+    left: auto;
+    transform: rotate(8deg);
+  }
+
+  .page-edges::before {
+    left: 0;
+  }
 
   .text-gradient-love {
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
@@ -142,66 +195,44 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-xl border border-white/30 shadow-premium;
+  }
 }
 
 @layer components {
   .btn-valentine {
-    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-romantic;
+    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-romantic hover:-translate-y-1 hover:shadow-premium flex items-center justify-center gap-2;
     background: var(--gradient-heart);
     color: hsl(var(--primary-foreground));
   }
 
-  .btn-valentine:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 50px -10px hsl(340 82% 65% / 0.5);
-  }
-
-  .btn-valentine-deep {
-    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300;
-    background: linear-gradient(180deg, hsl(var(--valentine-deep)) 0%, hsl(350 85% 35%) 100%);
-    color: hsl(var(--primary-foreground));
-    box-shadow: 0 10px 40px -10px hsl(350 80% 40% / 0.5);
-  }
-
-  .btn-valentine-deep:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 50px -10px hsl(350 80% 40% / 0.7);
+  .btn-valentine:active {
+    @apply transform scale-95;
   }
 
   .btn-valentine-outline {
-    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border-2;
-    border-color: hsl(var(--primary));
-    color: hsl(var(--primary));
-    background: transparent;
+    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border-2 bg-white/95 hover:bg-rose-50 shadow-sm hover:shadow-md hover:-translate-y-1 flex items-center justify-center gap-2;
+    border-color: hsl(var(--primary) / 0.6);
+    color: hsl(var(--primary-foreground));
+    backdrop-filter: blur(6px);
   }
 
-  .btn-valentine-outline:hover {
-    background: hsl(var(--primary) / 0.1);
-  }
-
-  .btn-valentine-outline-deep {
-    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border-2;
-    border-color: hsl(var(--valentine-deep));
-    color: hsl(var(--valentine-deep));
-    background: hsl(var(--background) / 0.5);
-  }
-
-  .btn-valentine-outline-deep:hover {
-    background: hsl(var(--valentine-deep) / 0.15);
+  .btn-valentine-outline:active {
+    @apply transform scale-95;
   }
 
   .glass-card {
-    background: hsl(var(--card) / 0.85);
-    backdrop-filter: blur(16px);
-    border-radius: 2rem;
-    border: 1px solid hsl(var(--border) / 0.5);
-    box-shadow: 
-      0 25px 50px -12px hsl(var(--valentine-deep) / 0.15),
-      0 0 0 1px hsl(var(--background) / 0.5) inset;
+    background: hsl(var(--card) / 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius);
+    border: 1px solid hsl(var(--border) / 0.2);
+    box-shadow: var(--shadow-premium);
   }
 
   .floating-heart {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
 
   @keyframes float {
@@ -209,21 +240,21 @@
       transform: translateY(0) rotate(0deg);
     }
     50% {
-      transform: translateY(-20px) rotate(5deg);
+      transform: translateY(-15px) rotate(3deg);
     }
   }
 
   @keyframes pulse-glow {
     0%, 100% {
-      box-shadow: 0 0 20px hsl(340 82% 65% / 0.3);
+      box-shadow: 0 0 20px hsl(340 82% 65% / 0.2);
     }
     50% {
-      box-shadow: 0 0 40px hsl(340 82% 65% / 0.6);
+      box-shadow: 0 0 35px hsl(340 82% 65% / 0.4);
     }
   }
 
   .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 2.5s ease-in-out infinite;
   }
 
   @keyframes petal-fall {
@@ -232,53 +263,54 @@
       opacity: 0;
     }
     10% {
-      opacity: 0.7;
+      opacity: 0.8;
     }
     90% {
-      opacity: 0.7;
+      opacity: 0.8;
     }
     100% {
-      transform: translateY(110vh) translateX(30px) rotate(360deg);
+      transform: translateY(110vh) translateX(40px) rotate(360deg);
       opacity: 0;
     }
   }
 
   .animate-petal-fall {
-    animation: petal-fall 10s ease-in-out infinite;
+    animation: petal-fall 12s linear infinite;
   }
 
   @keyframes kiss-appear {
     0% {
       opacity: 0;
-      transform: scale(0.3) rotate(var(--rotation, 0deg));
+      transform: scale(0.5) rotate(var(--rotation, 0deg));
     }
-    50% {
+    60% {
       opacity: 1;
       transform: scale(1.1) rotate(var(--rotation, 0deg));
     }
     100% {
-      opacity: 0.85;
+      opacity: 0.9;
       transform: scale(1) rotate(var(--rotation, 0deg));
     }
   }
 
   .animate-kiss-appear {
     opacity: 0;
-    animation: kiss-appear 0.6s ease-out forwards;
+    animation: kiss-appear 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
   @keyframes sparkle {
     0%, 100% {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1) rotate(0deg);
     }
     50% {
-      opacity: 0.5;
-      transform: scale(1.2);
+      opacity: 0.6;
+      transform: scale(1.2) rotate(15deg);
     }
   }
 
   .sparkle {
-    animation: sparkle 1.5s ease-in-out infinite;
+    animation: sparkle 2s ease-in-out infinite;
   }
 }
+

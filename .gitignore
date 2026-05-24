@@ -14,6 +14,23 @@ node_modules
 dist
 dist-ssr
 
+# Local npm temp packaging (bundled npm artifacts)
+npm_temp/
+
+# Environment
+.env
+.env.*
+
+# Vite / cache
+.vite/
+node_modules/
+
+# Optional coverage
+coverage/
+
+# Logs
+*.log
+
 # Environment files
 *.local
 

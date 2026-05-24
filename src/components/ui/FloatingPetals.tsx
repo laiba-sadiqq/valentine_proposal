@@ -12,42 +12,44 @@
  export default function FloatingPetals() {
    const [petals, setPetals] = useState<Petal[]>([]);
  
-   useEffect(() => {
-     const petalCount = 15;
-     const newPetals: Petal[] = [];
-     
-     for (let i = 0; i < petalCount; i++) {
-       newPetals.push({
-         id: i,
-         left: Math.random() * 100,
-         delay: Math.random() * 8,
-         duration: 8 + Math.random() * 6,
-         size: 16 + Math.random() * 12,
-         rotation: Math.random() * 360,
-       });
-     }
-     
-     setPetals(newPetals);
-   }, []);
+  useEffect(() => {
+    // Reduced petal count and softer motion for a subtler effect
+    const petalCount = 9;
+    const newPetals: Petal[] = [];
+
+    for (let i = 0; i < petalCount; i++) {
+      newPetals.push({
+        id: i,
+        left: 5 + Math.random() * 90,
+        delay: Math.random() * 12,
+        duration: 12 + Math.random() * 12,
+        size: 10 + Math.random() * 14,
+        rotation: Math.random() * 360,
+      });
+    }
+
+    setPetals(newPetals);
+  }, []);
  
    return (
      <div className="fixed inset-0 pointer-events-none overflow-hidden z-[1]">
        {petals.map((petal) => (
-         <div
-           key={petal.id}
-           className="absolute animate-petal-fall"
-           style={{
-             left: `${petal.left}%`,
-             animationDelay: `${petal.delay}s`,
-             animationDuration: `${petal.duration}s`,
-           }}
-         >
+        <div
+          key={petal.id}
+          className="absolute animate-petal-fall"
+          style={{
+            left: `${petal.left}%`,
+            animationDelay: `${petal.delay}s`,
+            animationDuration: `${petal.duration}s`,
+            zIndex: 0,
+          }}
+        >
            <svg
              width={petal.size}
              height={petal.size}
              viewBox="0 0 24 24"
              style={{ transform: `rotate(${petal.rotation}deg)` }}
-             className="opacity-70"
+             className="opacity-50"
            >
              <ellipse
                cx="12"

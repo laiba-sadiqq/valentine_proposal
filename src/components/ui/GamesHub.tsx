@@ -64,7 +64,7 @@ export default function GamesHub({ onNavigate }: { onNavigate?: (page: string) =
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 w-full">
           <button
             onClick={() => onNavigate?.('puzzle')}
-            className="group flex flex-col items-center p-8 glass-card hover:bg-white transition-all duration-300 hover:-translate-y-3"
+            className="group flex flex-col items-center p-8 glass-card glass-card-border-rose hover:bg-white transition-all duration-300 hover:-translate-y-3"
           >
             <div className="w-20 h-20 mb-6 bg-rose-50 rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500">
               <span className="text-5xl">🧩</span>
@@ -75,7 +75,7 @@ export default function GamesHub({ onNavigate }: { onNavigate?: (page: string) =
           
           <button
             onClick={() => onNavigate?.('memory')}
-            className="group flex flex-col items-center p-8 glass-card hover:bg-white transition-all duration-300 hover:-translate-y-3"
+            className="group flex flex-col items-center p-8 glass-card glass-card-border-purple hover:bg-white transition-all duration-300 hover:-translate-y-3"
           >
             <div className="w-20 h-20 mb-6 bg-purple-50 rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500">
               <span className="text-5xl">🎮</span>
@@ -86,7 +86,7 @@ export default function GamesHub({ onNavigate }: { onNavigate?: (page: string) =
           
           <button
             onClick={() => onNavigate?.('quiz')}
-            className="group flex flex-col items-center p-8 glass-card hover:bg-white transition-all duration-300 hover:-translate-y-3"
+            className="group flex flex-col items-center p-8 glass-card glass-card-border-red hover:bg-white transition-all duration-300 hover:-translate-y-3"
           >
             <div className="w-20 h-20 mb-6 bg-red-50 rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500">
               <span className="text-5xl">❤️</span>
@@ -97,7 +97,7 @@ export default function GamesHub({ onNavigate }: { onNavigate?: (page: string) =
           
           <button
             onClick={() => onNavigate?.('letters')}
-            className="group flex flex-col items-center p-8 glass-card hover:bg-white transition-all duration-300 hover:-translate-y-3"
+            className="group flex flex-col items-center p-8 glass-card glass-card-border-amber hover:bg-white transition-all duration-300 hover:-translate-y-3"
           >
             <div className="w-20 h-20 mb-6 bg-amber-50 rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500">
               <span className="text-5xl">💌</span>

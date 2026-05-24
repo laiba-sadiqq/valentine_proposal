@@ -9,7 +9,7 @@ export default function GamesHub({ onNavigate }: { onNavigate?: (page: string) =
 
       {/* Redesigned Hero Card */}
       <section className="w-full flex items-center justify-center mb-12">
-        <div className="w-full max-w-full glass-panel rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
+        <div className="w-full max-w-full glass-panel hero-panel rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1 text-center md:text-left">
             <span className="inline-block py-1 px-4 rounded-full bg-rose-50 text-rose-700 font-semibold text-sm tracking-wider mb-4 shadow-sm border border-rose-100">
               Hey there… 💕
